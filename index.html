@@ -1,50 +1,224 @@
 <!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<html lang="en">
 
-		<title>reveal.js</title>
+<head>
+    <meta charset="utf-8">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <title>Django</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <meta name="description" content="Marco de trabajo para perfeccionistas">
+    <meta name="author" content="pacifi">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <h1>Django</h1>
+            <h3>Django, el framework hecho en python para perfeccionistas.</h3>
+            <p>
+                <small>Created by <a href="https://github.com/pacifi">pacifi</a></small>
+            </p>
+        </section>
+
+        <section>
+            <h2>Agenda</h2>
+            <p>
+                <ul>
+            <li>Introducción</li>
+            <li>Entornos de trabajo</li>
+            <li>Aplicación</li>
+            <li>Django Rest.</li>
+
+
+        </ul>
+            </p>
+        </section>
+
+
+        <section>
+            <section>
+                <h2>Introducción</h2>
+                <p>
+                    Fue desarrollado en origen para gestionar varias páginas orientadas a noticias de la World Company de Lawrence, Kansas, y fue liberada al público bajo una licencia BSD en julio de 2005; el framework fue nombrado en alusión al guitarrista de jazz gitano Django Reinhardt.
+                </p>
+                <p>
+                    Django impulsa el desarrollo de código limpio al promover buenas prácticas de desarrollo web, sigue el principio DRY (conocido también como Una vez y sólo una).
+                    Django es una moficicación de la arquitectura MVC llamada MTV (Modelo, Template, Vista), (Modelo, Plantilla, Vista)
+
+                </p>
+                <br>
+                <a href="#" class="navigate-down">
+                    <img width="50" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+                </a>
+            </section>
+
+            <section>
+                <h2>MVC</h2>
+
+                <img data-src="img/mvc.png" alt="">
+            </section>
+            <section>
+                <h2>MTV</h2>
+                <img data-src="img/django_mtv.png" width="800" alt="">
+            </section>
+            <section>
+                <h2>Motivación</h2>
+                <h3>Quienes Usan django</h3>
+                <ul>
+                    <li><a href="http://dpaste.com/">dpaste</a></li>
+                    <li><a href="https://www.washingtonpost.com/">Parte The Washington post</a></li>
+                    <li><a href="https://disqus.com/">Disques</a></li>
+                    <li><a href="https://bitbucket.org">Bitbucket.org</a></li>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">lawrence.com</a></li>
+                    <li><a href="">...</a></li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Entornos de Trabajo</h2>
+                <p>
+                    Una Buena práctica de desarrollo es tener las dependencias de cada proyecto siempre ordenado.
+                </p>
+                <p>
+                    Los entornos virtuales son espacios de trabajo creados dentro del equipo. La virtualización se puede relacionar mejor entendiendo como trabaja virtualbox o vmware que te crean un espacio de trabajo para que sobre este podamos instalar todo un sistema operativo. Uno de los más famosos entornos virtuales para python es virtualenv este entorno de virtualizacion tiene una opcion mas sofistica basada en virtualenv llamada virtualenvwrapper que es la opción que trabajaremos en este taller.
+
+                </p>
+
+            </section>
+            <section>
+                <h3>Instalación</h3>
+                <pre>
+                    <code data-trim data-noescape>
+                        $ sudo apt-get install python-pip
+                    </code>
+    <spam>python-pip es un manejador de paquetes de
+python el cual nos permitirá instalar de forma
+mucho más sencilla los paquete que
+necesitemos.</spam>
+                </pre>
+                <pre>
+                    <code data-trim data-noescape>
+                        $ sudo pip install virtualenvwrapper
+                    </code>
+    <spam>vemos como ahora usamos el manejador de
+paquetes de python pip para la instalación de virtualenvwrapper.
+                    </spam>
+                </pre>
+
+            </section>
+            <section>
+                <h3>Configuración</h3>
+                <pre>
+<spam>Crear los siguiente ficheros</spam>
+                    <code data-trim data-noescape>
+$ cd ~
+$ mkdir .virtualenvs
+$ mkdir proyectosdjango
+
+                    </code>
+                </pre>
+                <pre>
+<span>Copiar las siguientes líneas a .bashrc o .zshrc</span>
+                    <code>
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/proyectosdjango
+source /usr/local/bin/virtualenvwrapper.sh
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Comandos</h3>
+                <pre>
+<spam>Crear Entorno de trabajo</spam>
+<code>mkproject -p {pythonversion} {nombre-entorno}</code>
+<spam>Desactiva Entorno de trabajo</spam>
+<code>deactivate</code>
+<spam>Ingresa al Entorno de trabajo</spam>
+<code>workon  {nombre-entorno}</code>
+<spam>Elimina Entorno de trabajo</spam>
+<code>rmvirtualenv  {nombre-entorno}</code>
+
+                </pre>
+            </section>
+
+        </section>
+<section>
+    <h3>Aplicación</h3>
+<pre>
+
+<spam>Instalar Django</spam>
+<code>$ pip install django</code>
+<spam>crear un proyecto django</spam>
+<code>$ django-admin.py startproject {nombre_preyecto}</code>
+<spam>Crear app</spam>
+<code>$ django-admin.py startapp {nombre_app}</code>
+<spam>Iniciar Migración</spam>
+<code>$ python manage.py makemigrations</code>
+<spam>Migrar base de datos</spam>
+<code>$ python manage.py migrate</code>
+    </pre>
+</section>
+    </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/zoom-js/zoom.js', async: true },
+            { src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+
+</script>
+
+</body>
 </html>
